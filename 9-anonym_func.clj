@@ -24,3 +24,6 @@
    (get (vec ls) (- (count (vec ls)) 2))) '(1 2 3))
 
 (#(second (reverse %)) #{ 1 2 3 4})
+
+
+
