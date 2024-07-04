@@ -36,3 +36,12 @@
                      (set [part (match-part part)])))))))
 
 (symmetrize-body-parts asym-hobbit-body-parts)
+
+(defn better-symmetrize-body-parts
+  [asym-body-parts]
+  (reduce 
+   #(into %1 (set [%2 (match-part %2)]))
+   []
+   asym-body-parts))
+
+(better-symmetrize-body-parts asym-hobbit-body-parts)
