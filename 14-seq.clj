@@ -17,3 +17,16 @@
 (stats [1 2 3 4])
 
 
+;; reduce
+(reduce (fn [new-map [key val]]
+          (assoc new-map key (inc val)))
+        {}
+        {:min 10 :max 30})
+
+
+;; take and drop
+(take 3 '(1 2 3 4 5 6))
+(drop 3 [1 2 3 4 5 6])
+
+
+
