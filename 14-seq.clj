@@ -28,5 +28,19 @@
 (take 3 '(1 2 3 4 5 6))
 (drop 3 [1 2 3 4 5 6])
 
+;; take-while and drop-while
+(take-while #(> % 2) [3 4 5 6 5 4 2 2]) 
+(drop-while #(> % 2) [3 4 5 4 3 2 1 2 1 0 1])
 
+;; filter
+(filter #(< % 3) [2 3 4 1 3 4 0 -1 3 2 5 6])
+ 
+;; some
+(some #(> % 4) [1 2 3 2 1 2])
+(some #(> % 2) [1 2 3 2 1 2])
 
+;; sort and sort-by
+(sort '(\d \v \a \b \c))
+(sort-by count ["as" "cvf" "" "xcdse"])
+
+(concat [1 2] [3 4])
