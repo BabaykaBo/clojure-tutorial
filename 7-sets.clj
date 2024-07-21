@@ -36,11 +36,11 @@ a ;; immutabe
 
 ;; default value
 (get #{1 2 :a} :b 34)
-;;(#{1 2 :a} :b 34) -> error
+(#{1 2 :a} :b 34)
 (:a #{1 2 :b} 34)
 
 (get #{1 2 3} 4 34)
-;;(#{1 2 3} 4 34) -> error
+(#{1 2 3} 4 34)
 ;; (3 #{1 2 3} 34) -> error
 
 ;; contains
